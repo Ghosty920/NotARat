@@ -23,3 +23,8 @@ If you want to improve the code, I'll add a small list of things to do but I'll 
 In the Releases, I also put a YesARat file. This file is exactly the same code as NotARat but without using Reflection.
 
 So if you want to test it in a rat detector, it'll be detected, even tho it's exactly the same thing. GG [isthisarat](https://isthisarat.com/) ig…
+
+## All Websites this was tested on
+- [Rat Rater 2](https://ktibow.github.io/RatRater2/) since 1.1
+- [Rat Rater](https://ktibow.github.io/RatRater2/) since 1.0
+- [isthisarat](https://isthisarat.com/) since 1.0
