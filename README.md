@@ -29,4 +29,5 @@ So if you want to test it in a rat detector, it'll be detected, even tho it's ex
 - [Rat Rater 2](https://ktibow.github.io/RatRater2/) since 1.1
 - [Rat Rater](https://ktibow.github.io/RatRater/) since 1.0
 - [isthisarat](https://isthisarat.com/) since 1.0
+
 If you see that a detector is missing, even if it doesn't bypass, please tell me.
