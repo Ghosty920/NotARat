@@ -67,7 +67,7 @@ tasks.withType(Jar::class) {
 }
 
 tasks.processResources {
-    inputs.property("version", project.version)
+    inputs.property("version", version)
     inputs.property("mcversion", mcVersion)
     inputs.property("modid", modid)
 

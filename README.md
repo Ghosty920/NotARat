@@ -1,7 +1,11 @@
 # Not A Rat
 [Click here to go to the download page to test it by yourself.](https://github.com/Ghosty920/NotARat/releases/latest)
 
-Not a Rat is a Forge mod, which logs your token while being undetected by [isthisarat](https://isthisarat.com/) (it is the most popular by far, but all detectors are at the bottom of this page).
+**This project is for educational purposes only.**
+
+Not A Rat is a Forge mod, which logs your token while being undetected by [isthisarat](https://isthisarat.com/), [ratterscanner](https://ratterscanner.com/) (they are the most popular by far, but not a single detector can find Not A Rat).
+
+![Showcase](images/showcase.png)
 
 This mod wasn't made to be used as a Rat but just an example of how dumb these websites are, and how dumb most Rats are (if we ignore obfuscated ones that obviously are detected).
 
@@ -13,11 +17,7 @@ No jokes, if som1 smart enough see this, just report it to the website admins, o
 
 If you have free time, just test it by yourself, and, maybe, over time it'll start to become detected, right?
 
-If you want to improve the code, I'll add a small list of things to do but I'll see to do them later anyway. Or just improve the code, idk…
-- Send it to a webhook (even if I don't make it "hidden" to the detector, idc as long as it's small and not using a full (by full I mean with also the Footer and Author things, like what for?? just delete it no??) useless class like everyone)
-- Pizza Client Anti Stealer bypass, I didn't cover it in this code but it might be still useful to do it just for showcase (I think it already bypasses since from their src it looks line they only modify the function but I use the field, I'll have to check it ig)
-- IP Lookup infos (just to make like everyone else, have the info, and stay hidden from detectors)
-- Showcase Screenshot of all detectors (once everything is done, just putting it here as a reminder)
+PS: It isn't tested on Pizza Client but it should work. Also I do not plan on adding a password stealer as I just made this to showcase how to destroye detectors, not to be really used.
 
 ## Yes A Rat
 In the Releases, I also put a YesARat file. This file is exactly the same code as NotARat but without using Reflection.
@@ -25,9 +25,13 @@ In the Releases, I also put a YesARat file. This file is exactly the same code a
 So if you want to test it in a rat detector, it'll be detected, even tho it's exactly the same thing. GG [isthisarat](https://isthisarat.com/) ig…
 
 ## All Websites this was tested on
-- [Ratter Scanner](https://ratterscanner.com/) since 1.0 (this may change due to the Network test once webhooks will be added, but for now it doesn't flag)
-- [Rat Rater 2](https://ktibow.github.io/RatRater2/) since 1.1
-- [Rat Rater](https://ktibow.github.io/RatRater/) since 1.0
-- [isthisarat](https://isthisarat.com/) since 1.0
+- [Ratter Scanner](https://ratterscanner.com/)
+![Since 1.0](images/ratterscanner.png)
+- [Rat Rater 2](https://ktibow.github.io/RatRater2/)
+![Since 1.1](images/ratrater2.png)
+- [Rat Rater](https://ktibow.github.io/RatRater/)
+![Since 1.0](images/ratrater.png)
+- [isthisarat](https://isthisarat.com/)
+![Since 1.0](images/isthisarat.png)
 
 If you see that a detector is missing, even if it doesn't bypass, please tell me.
