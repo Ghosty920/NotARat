@@ -25,6 +25,7 @@ In the Releases, I also put a YesARat file. This file is exactly the same code a
 So if you want to test it in a rat detector, it'll be detected, even tho it's exactly the same thing. GG [isthisarat](https://isthisarat.com/) ig…
 
 ## All Websites this was tested on
+- [Ratter Scanner](https://ratterscanner.com/) since 1.0 (this may change due to the Network test once webhooks will be added, but for now it doesn't flag)
 - [Rat Rater 2](https://ktibow.github.io/RatRater2/) since 1.1
 - [Rat Rater](https://ktibow.github.io/RatRater/) since 1.0
 - [isthisarat](https://isthisarat.com/) since 1.0
