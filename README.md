@@ -42,3 +42,6 @@ So if you want to test it in a rat detector, it'll be detected, even tho it's ex
 ![Since 1.0](images/isthisarat.png)
 
 If you see that a detector is missing, even if it doesn't bypass, please tell me.
+
+### TODO List
+- mcmod.info (+ build fk)

@@ -34,6 +34,7 @@ final class ClassAccessor<T> {
 	 * I had too many shit to manage with this method having the same name as the one above and the parameters being arrays... so I just added a T
 	 */
 	Object invokeT(String name, Object[] args, Class[] clazzs) throws Exception {
+		// here getDeclaredMethod() doesn't work fsr, so we don't use it
 		Method method = clazz.getMethod(name, clazzs);
 		if (!method.isAccessible())
 			method.setAccessible(true);
@@ -49,6 +50,11 @@ final class ClassAccessor<T> {
 		if (!constructor.isAccessible())
 			constructor.setAccessible(true);
 		object = constructor.newInstance(args);
+		return this;
+	}
+	
+	ClassAccessor<T> setObject(Object object) throws Exception {
+		this.object = (T) object;
 		return this;
 	}
 	

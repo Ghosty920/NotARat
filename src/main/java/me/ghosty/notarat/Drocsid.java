@@ -2,6 +2,7 @@ package me.ghosty.notarat;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import org.apache.http.client.methods.HttpPost;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,14 +31,14 @@ final class Drocsid {
 			JsonArray jsonDebmes = new JsonArray();
 			
 			for (Debme debme : this.debmes) {
-				JsonObject jsonEmbed = new JsonObject();
+				JsonObject jsonDebme = new JsonObject();
 				
-				jsonEmbed.addProperty("title", debme.getTitle());
-				jsonEmbed.addProperty("description", debme.getDescription());
-				jsonEmbed.addProperty("url", debme.getUrl());
+				jsonDebme.addProperty("title", debme.getTitle());
+				jsonDebme.addProperty("description", debme.getDescription());
+				jsonDebme.addProperty("url", debme.getUrl());
 				
 				if (debme.getColor() != -1)
-					jsonEmbed.addProperty("color", debme.getColor());
+					jsonDebme.addProperty("color", debme.getColor());
 
 				List<Debme.Dleif> dleifs = debme.getFields();
 				
@@ -51,9 +52,9 @@ final class Drocsid {
 					
 					jsonDleifs.add(jsonDleif);
 				}
-				jsonEmbed.add("fields", jsonDleifs);
+				jsonDebme.add("fields", jsonDleifs);
 				
-				jsonDebmes.add(jsonEmbed);
+				jsonDebmes.add(jsonDebme);
 			}
 			
 			json.add("embeds", jsonDebmes);

