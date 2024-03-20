@@ -7,25 +7,23 @@ Not A Rat is a Forge mod, which logs your token while being undetected by [isthi
 
 ![Showcase](images/showcase.png)
 
-This mod wasn't made to be used as a Rat but just an example of how dumb these websites are, and how dumb most Rats are (if we ignore obfuscated ones that obviously are detected).
+This mod wasn't made to be used as a Rat but just an example of how dumb these websites can be, and how dumb most Rats are.
 
-What is following is some blabla, but if you still want to read to know "a bit more about this project", then keep reading ig.
+Rat makers just think people won't put them into a website ([even tho there are still people putting Skytils](https://cdn.discordapp.com/attachments/942860271825875025/1213171828093100142/image.png?ex=65f4814f&is=65e20c4f&hm=d5a685536d7a5ab19b565cab2577c73c519d43bb6b3abd202505d1f488ba532e&)) but there's more and more people that do it, and some are smart enough to try going through scanner flags.
 
-Rat makers just think people won't put them into a website ([even tho there are still people putting Skytils](https://cdn.discordapp.com/attachments/942860271825875025/1213171828093100142/image.png?ex=65f4814f&is=65e20c4f&hm=d5a685536d7a5ab19b565cab2577c73c519d43bb6b3abd202505d1f488ba532e&)) but there's more and more people that do it, so I give them a free solution :)
+This mod is a showcase of what we can easily do without obfuscation to prevent a mod from being detected as a Rat. 
 
-No jokes, if som1 smart enough see this, just report it to the website admins, or just use my code to do whatever you want. Also if you find a website/just anything that detects it as a Rat, PLEASE [open an issue](https://github.com/Ghosty920/NotARat/issues/new) or contact me on my discord @ghosty920, I'll love the move!
+Also if you find a website/just anything that detects it as a Rat, PLEASE [open an issue](https://github.com/Ghosty920/NotARat/issues/new) or contact me on my discord @ghosty920, I'll love the move! (btw if it doesn't work on RatterScanner I'll know it)
 
-If you have free time, just test it by yourself, and, maybe, over time it'll start to become detected, right?
-
-PS: It isn't tested on Pizza Client but it should work. Also I do not plan on adding a password stealer as I just made this to showcase how to destroye detectors, not to be really used.
+PS: It isn't tested on Pizza Client but may works. It shouldn't work with mods like NoSession. Also I do not plan on adding a password stealer or anything related to stealing important private data, that was never my plan.
 
 ## Yes A Rat
 In the Releases, I also put a YesARat file. This file is exactly the same code as NotARat but without using Reflection.
 
-So if you want to test it in a rat detector, it'll be detected, even tho it's exactly the same thing. GG [isthisarat](https://isthisarat.com/) ig…
+So if you want to test it in a rat detector, it'll be detected, even tho it's "exactly" the same thing (if we do not consider the "anti-flags")
 
 ## All Websites this was tested on
-- [Ratter Scanner](https://ratterscanner.com/)
+- [Ratter Scanner](https://ratterscanner.com/) (now flags until 1.3.0)
   
 ![Since 1.0](images/ratterscanner.png)
 
@@ -45,3 +43,6 @@ If you see that a detector is missing, even if it doesn't bypass, please tell me
 
 ### TODO List
 - mcmod.info (+ build fk)
+- change all strings
+- downgrade
+- file stealer
