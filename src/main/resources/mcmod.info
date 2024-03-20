@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "notarat",
+    "name": "Not A Rat",
+    "description": "A Minecraft undetected RAT",
+    "version": "${version}",
+    "mcversion": "1.8",
+    "url": "https://github.com/Ghosty920/NotARat",
+    "updateUrl": "https://github.com/Ghosty920/NotARat/releases/latest",
+    "authorList": ["Ghosty"],
+    "credits": "To RatterScanner for their work, keep going!",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

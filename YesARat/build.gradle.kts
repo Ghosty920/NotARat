@@ -17,15 +17,8 @@ java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(8))
 }
 
-loom {
-    launchConfigs {
-        "client" {
-            property("asmhelper.verbose", "true")
-        }
-    }
-    forge {
-        pack200Provider.set(dev.architectury.pack200.java.Pack200Adapter())
-    }
+loom.forge {
+    pack200Provider.set(dev.architectury.pack200.java.Pack200Adapter())
 }
 
 repositories {
@@ -48,8 +41,6 @@ dependencies {
     minecraft("com.mojang:minecraft:1.8.9")
     mappings("de.oceanlabs.mcp:mcp_stable:22-1.8.9")
     forge("net.minecraftforge:forge:1.8.9-11.15.1.2318-1.8.9")
-
-    // Used for Runtime Authentification
     runtimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.1.2")
 }
 
@@ -66,15 +57,6 @@ tasks.withType(Jar::class) {
     }
 }
 
-/*tasks.processResources {
-    inputs.property("version", version)
-    inputs.property("mcversion", mcVersion)
-    inputs.property("modid", modid)
-
-    rename("(.+_at.cfg)", "META-INF/$1")
-}*/
-
-
 val remapJar by tasks.named<net.fabricmc.loom.task.RemapJarTask>("remapJar") {
     archiveClassifier.set("")
     from(tasks.shadowJar)
@@ -82,6 +64,17 @@ val remapJar by tasks.named<net.fabricmc.loom.task.RemapJarTask>("remapJar") {
 }
 
 tasks {
+    processResources {
+        inputs.property("version", project.version)
+        inputs.property("mcversion", mcVersion)
+        inputs.property("modid", modid)
+
+        filesMatching(listOf("mcmod.info")) {
+            expand(inputs.properties)
+        }
+
+        rename("(.+_at.cfg)", "META-INF/$1")
+    }
     jar {
         archiveClassifier.set("without-deps")
         destinationDirectory.set(layout.buildDirectory.dir("badjars"))
@@ -98,4 +91,5 @@ tasks {
         fun relocate(name: String) = relocate(name, "$baseGroup.deps.$name")
     }
     assemble.get().dependsOn(remapJar)
+
 }
