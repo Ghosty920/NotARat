@@ -1,11 +1,14 @@
 # Not A Rat
 [Click here to go to the download page to test it by yourself.](https://github.com/Ghosty920/NotARat/releases/latest)
 
-**This project is for educational purposes only.**
+**This project was and is for educational purposes only.**
 
-Not A Rat is a Forge mod, which logs your token while being undetected by [isthisarat](https://isthisarat.com/), [ratterscanner](https://ratterscanner.com/) (they are the most popular by far, but not a single detector can find Not A Rat).
+**This project is discontinued. If you have any issue regarding it, or you want it to be updated, do not contact me.**
+
+Not A Rat is a Forge mod, which logs your token while being undetected by [isthisarat](https://isthisarat.com/), and previously [ratterscanner](https://ratterscanner.com/) (they are the most popular by far, but not a single detector could find Not A Rat).
 
 ![Showcase](images/showcase.png)
+*Ps: Saved Servers was then removed because considered useless by myself.*
 
 This mod wasn't made to be used as a Rat but just an example of how dumb these websites can be, and how dumb most Rats are.
 
@@ -13,12 +16,21 @@ Rat makers just think people won't put them into a website ([even tho there are 
 
 This mod is a showcase of what we can easily do without obfuscation to prevent a mod from being detected as a Rat. 
 
-Also if you find a website/just anything that detects it as a Rat, PLEASE [open an issue](https://github.com/Ghosty920/NotARat/issues/new) or contact me on my discord @ghosty920, I'll love the move! (btw if it doesn't work on RatterScanner I'll know it)
+## Why archiving this?
+- **1-** My goal was not for it to be used as a Rat (I didn't care, but as people came into my dms without even starring the project 😥, I decided it was enough)
+- **2-** Ratter Scanner developers are very cool! Honestly, it was fun talking with these guys, seeing what they were capable of. Thank you Quint 💙
+- **3-** I have school. Literally, this project was fun to work on, but it took too much time to setup, update... I now get bored of this, and if I came to write this, it is what it is.
 
-PS: It isn't tested on Pizza Client but may works. It shouldn't work with mods like NoSession. Also I do not plan on adding a password stealer or anything related to stealing important private data, that was never my plan.
+If you still want to test it (not to use it for any malicious reason), do so, and please use [Ratter Scanner](https://ratterscanner.com/) to check any file you receive and you do not feel safe. Even stuff on github like [CrimsonHelper aka CrimsonTool](https://github.com/Crimsontool/crimsontool-/) that are blatant Rats but that people may not check because "ay, it's open source 😉".
+
+lol
+![images/img](images/img.png)
+
+my goal is completed ig, i'm famous
+![images/img_1](images/img_1.png)
 
 ## All Websites this was tested on
-- [Ratter Scanner](https://ratterscanner.com/) (now flags until 1.3.0)
+- [Ratter Scanner](https://ratterscanner.com/) (now flags, forever.)
   
 ![Since 1.0](images/ratterscanner.png)
 
@@ -33,8 +45,3 @@ PS: It isn't tested on Pizza Client but may works. It shouldn't work with mods l
 - [isthisarat](https://isthisarat.com/)
   
 ![Since 1.0](images/isthisarat.png)
-
-If you see that a detector is missing, even if it doesn't bypass, please tell me.
-
-### TODO List
-- file stealer for showcase
